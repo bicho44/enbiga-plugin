@@ -189,7 +189,7 @@ function show_categoria($taxonomies)
         ,'show_admin_column' => true
         ,'configuration' => array(
             'hierarchical' => false
-            ,'labels' => $labelEventos
+            ,'labels' => $labelevento
             ,'show_ui' => true
             ,'query_var' => true
             ,'rewrite' => array(
