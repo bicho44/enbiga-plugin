@@ -38,7 +38,7 @@ function turismo_plugin_init() {
     $plugin_dir = basename(dirname(__FILE__)).'/languages';
     //echo '<h1>'.$plugin_dir.'</h1>';
     load_plugin_textdomain( 'imgd', false, $plugin_dir );
-    wp_enqueue_script( 'turismo-programa', TURISMO_PLUGIN_PATH.'assets/js/jquery.fitvids.js', array( 'jquery' ), null, true );
+    //wp_enqueue_script( 'enbiga-programa', TURISMO_PLUGIN_PATH.'assets/js/jquery.fitvids.js', array( 'jquery' ), null, true );
 }
 add_action('plugins_loaded', 'turismo_plugin_init');
 
