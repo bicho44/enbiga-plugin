@@ -350,7 +350,7 @@ function get_imgd_casino_show_salon($post_ID){
     return $data;
 }
 
-
+if (!function_exists('imgd_paises')){
 /**
 * IMGD Paises
 * Devuelve un array con los países
@@ -590,7 +590,7 @@ function imgd_paises(){
         );
         return $paises;
 }
-
+}
 /**
 * Get the list of images Sizes in a array
 *
