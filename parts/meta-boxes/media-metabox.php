@@ -1,8 +1,8 @@
 <?php
 /*
 Title: Imagenes Personalizada
-Post Type: imgd_casino_shows
-Description: Estas imágenes van a ser usadas en el SlideShow de cada página. en el caso de haberlos
+Post Type: imgd_chefs, imgd_invitado, post, page
+Description: Imagen Principal
 Order: 3
 Context: side
 */
@@ -12,7 +12,7 @@ piklist('field', array(
     ,'field' => '_thumbnail_id' // Use these field to match WordPress featured images.
     ,'scope' => 'post_meta'
     ,'options' => array(
-        'title' => __('Imagenes del Show', 'imgd')
-        ,'button' => __('Inserte las imagenes', 'imgd')
+        'title' => __('Imagen Principal', 'imgd')
+        ,'button' => __('Inserte la imagen Principal', 'imgd')
     )
 ));

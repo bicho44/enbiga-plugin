@@ -3,7 +3,7 @@
 Plugin Name: IMGD ENBIGA
 Plugin URI: http://imgdigital.com.ar/portfolio/projects/
 Description: Este es un Plug-in para el sitio del ENBIGA
-Version: 1.0.0
+Version: 1.0.1
 Author: Federico Reinoso
 Author URI: http://imgdigital.com.ar
 Text Domain: imgd
@@ -198,24 +198,27 @@ add_filter('piklist_taxonomies', 'show_categoria');
 
 function show_categoria($taxonomies)
 {
+$labelUbicaplural = 'Grupos';
+  $labelUbicasingular = 'Grupo';
+
   $labelUbica = array(
-    'name'                          => __( 'Ubicaciones', 'imgd' ),
-    'singular_name'                 => __( 'Ubicación', 'imgd' ),
-    'search_items'                  => __( 'Buscar la Ubicación', 'imgd' ),
-    'popular_items'                 => __( 'Ubicaciones Populares', 'imgd' ),
-    'all_items'                     => __( 'Todas las Ubicaciones', 'imgd' ),
-    'parent_item'                   => __( 'Ubicación pariente', 'imgd' ),
-    'edit_item'                     => __( 'Editar Ubicación', 'imgd' ),
-    'update_item'                   => __( 'Actualizar Ubicación', 'imgd' ),
-    'add_new_item'                  => __( 'Agregar una nueva Ubicación', 'imgd' ),
-    'new_item_name'                 => __( 'Nueva Ubicación', 'imgd' ),
-    'separate_items_with_commas'    => __( 'Separe las Ubicaciones con comas', 'imgd' ),
-    'add_or_remove_items'           => __( 'Agregue o Borre Ubicaciones', 'imgd' ),
-    'choose_from_most_used'         => __( 'Elija alguna ubicación entre las más usadas', 'imgd' )
+    'name'                          => __( $labelUbicaplural, 'imgd' ),
+    'singular_name'                 => __( $labelUbicasingular, 'imgd' ),
+    'search_items'                  => __( 'Buscar la '.$labelUbicasingular, 'imgd' ),
+    'popular_items'                 => __( $labelUbicaplural.' Populares', 'imgd' ),
+    'all_items'                     => __( 'Todas las '.$labelUbicaplural, 'imgd' ),
+    'parent_item'                   => __( $labelUbicasingular.' pariente', 'imgd' ),
+    'edit_item'                     => __( 'Editar '.$labelUbicasingular, 'imgd' ),
+    'update_item'                   => __( 'Actualizar '.$labelUbicasingular, 'imgd' ),
+    'add_new_item'                  => __( 'Agregar una nueva ',$labelUbicasingular, 'imgd' ),
+    'new_item_name'                 => __( 'Nueva '.$labelUbicasingular, 'imgd' ),
+    'separate_items_with_commas'    => __( 'Separe las'.$labelUbicaplural.' con comas', 'imgd' ),
+    'add_or_remove_items'           => __( 'Agregue o Borre '.$labelUbicaplural, 'imgd' ),
+    'choose_from_most_used'         => __( 'Elija alguna '.$labelUbicasingular.' entre las más usadas', 'imgd' )
 );
     $taxonomies[] = array(
         'post_type' => array('imgd_chef', 'post', 'page')
-        ,'name' => 'imgd_servicio_ubicacion'
+        ,'name' => 'imgd_servicio_grupo'
         ,'show_admin_column' => true
         ,'configuration' => array(
             'hierarchical' => true
@@ -223,7 +226,41 @@ function show_categoria($taxonomies)
             ,'show_ui' => true
             ,'query_var' => true
             ,'rewrite' => array(
-                    'slug' => __('ubicacion', 'imgd')
+                    'slug' => __('grupo', 'imgd')
+                )
+            )
+    );
+
+
+  $labelUbicaplural = 'Ciudades';
+  $labelUbicasingular = 'Ciudad';
+
+  $labelUbica = array(
+    'name'                          => __( $labelUbicaplural, 'imgd' ),
+    'singular_name'                 => __( $labelUbicasingular, 'imgd' ),
+    'search_items'                  => __( 'Buscar la '.$labelUbicasingular, 'imgd' ),
+    'popular_items'                 => __( $labelUbicaplural.' Populares', 'imgd' ),
+    'all_items'                     => __( 'Todas las '.$labelUbicaplural, 'imgd' ),
+    'parent_item'                   => __( $labelUbicasingular.' pariente', 'imgd' ),
+    'edit_item'                     => __( 'Editar '.$labelUbicasingular, 'imgd' ),
+    'update_item'                   => __( 'Actualizar '.$labelUbicasingular, 'imgd' ),
+    'add_new_item'                  => __( 'Agregar una nueva ',$labelUbicasingular, 'imgd' ),
+    'new_item_name'                 => __( 'Nueva '.$labelUbicasingular, 'imgd' ),
+    'separate_items_with_commas'    => __( 'Separe las'.$labelUbicaplural.' con comas', 'imgd' ),
+    'add_or_remove_items'           => __( 'Agregue o Borre '.$labelUbicaplural, 'imgd' ),
+    'choose_from_most_used'         => __( 'Elija alguna '.$labelUbicasingular.' entre las más usadas', 'imgd' )
+);
+    $taxonomies[] = array(
+        'post_type' => array('imgd_periodista','imgd_chef', 'post', 'page')
+        ,'name' => 'imgd_servicio_ciudad'
+        ,'show_admin_column' => true
+        ,'configuration' => array(
+            'hierarchical' => true
+            ,'labels' => $labelUbica
+            ,'show_ui' => true
+            ,'query_var' => true
+            ,'rewrite' => array(
+                    'slug' => __('ciudad', 'imgd')
                 )
             )
     );
@@ -247,7 +284,7 @@ function show_categoria($taxonomies)
     );
 
     $taxonomies[] = array(
-        'post_type' => array('imgd_chef', 'page', 'post')
+        'post_type' => array('imgd_periodista','imgd_chef', 'page', 'post')
         ,'name' => 'imgd_servicio_categoria'
         ,'show_admin_column' => true
         ,'configuration' => array(
