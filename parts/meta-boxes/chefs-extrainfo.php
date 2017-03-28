@@ -1,7 +1,7 @@
 <?php
 /*
 Title: Data Extra Chefs
-Post Type: imgd_chef, imgd_periodista, post, page
+Post Type: imgd_chef
 Description: Data extra para los Chefs
 Order: 3
 */
