@@ -8,8 +8,8 @@ Order: 3
 
   piklist('field', array(
     'type' => 'text',
-    'field' => __('Cargo Actual','imgd'),
-    'label' => 'Text',
+    'field' => 'imgd_chef_cargo',
+    'label' => __('Cargo Actual','imgd'),
     'attributes' => array(
       'class' => 'regular-text' // WordPress css class 
     )
