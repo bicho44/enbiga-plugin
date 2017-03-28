@@ -3,7 +3,7 @@
 Plugin Name: IMGD ENBIGA
 Plugin URI: http://imgdigital.com.ar/portfolio/projects/
 Description: Este es un Plug-in para el sitio del ENBIGA
-Version: 1.0.1
+Version: 1.0.2
 Author: Federico Reinoso
 Author URI: http://imgdigital.com.ar
 Text Domain: imgd
