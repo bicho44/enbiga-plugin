@@ -1,7 +1,7 @@
 <?php
 /*
 Title: Imagenes Personalizada
-Post Type: imgd_chefs, imgd_invitado, post, page
+Post Type: imgd_chef, imgd_periodista, post, page
 Description: Imagen Principal
 Order: 3
 Context: side
