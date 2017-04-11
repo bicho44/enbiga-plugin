@@ -187,6 +187,16 @@ function turismo_post_type($post_types)
     return $post_types;
 }
 
+/**
+*  Asigna la cantidad de Chefs que se muestran por hoja.
+*/
+function set_posts_per_page_for_towns_cpt( $query ) {
+  if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'imgd_chef' ) ) {
+    $query->set( 'posts_per_page', '12' );
+  }
+}
+add_action( 'pre_get_posts', 'set_posts_per_page_for_towns_cpt' );
+
 
 /**
  * Definir Taxonomía del Custom Post Type
