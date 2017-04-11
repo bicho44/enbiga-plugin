@@ -74,6 +74,7 @@ function turismo_post_type($post_types)
             )
         ,'type' => 'page'
         ,'title' => __('Ingrese un nuevo '.$singular, 'imgd')
+        ,'description'=>__('Chefs participantes de ENBIGA en sus diferentes ediciones','imgd')
         ,'public' => true
         ,'capability_type' => 'page'
         ,'has_archive' => __('chefs','imgd')
