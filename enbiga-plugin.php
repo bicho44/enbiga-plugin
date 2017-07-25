@@ -189,10 +189,11 @@ function turismo_post_type($post_types)
 
 /**
 *  Asigna la cantidad de Chefs que se muestran por hoja.
+*  Fuente: https://css-tricks.com/forums/topic/wp-posts-per-page-on-custom-post-type/
 */
 function set_posts_per_page_for_towns_cpt( $query ) {
   if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'imgd_chef' ) ) {
-    $query->set( 'posts_per_page', '12' );
+    $query->set( 'posts_per_page', '18' );
   }
 }
 add_action( 'pre_get_posts', 'set_posts_per_page_for_towns_cpt' );
